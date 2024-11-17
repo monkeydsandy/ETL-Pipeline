@@ -7,6 +7,7 @@ This project implements an automated ETL (Extract, Transform, Load) pipeline usi
 
 A[S3 Bucket] --> B[Kubernetes Pod] --> C[Amazon Redshift]
 
+![etl](https://github.com/user-attachments/assets/1c8eea1e-1c6a-4946-80de-773b0da41b75)
 
 ## Project Flow
 1. **Data Source**: Raw data stored in Amazon S3
