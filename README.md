@@ -11,31 +11,31 @@ A[S3 Bucket] --> B[Kubernetes Pod] --> C[Amazon Redshift]
 
 ![etl](https://github.com/user-attachments/assets/1c8eea1e-1c6a-4946-80de-773b0da41b75)
 
-🌟 ##Credit risk assessment
+🌟 Credit risk assessment
 
-##Current Ratio:
+Current Ratio:
 Strong (>2.0): Texas Instruments (2.91), BioMarin (6.04)
 Adequate (1.5-2.0): Honeywell (1.50), Schlumberger (1.90)
 Weak (<1.0): Enbridge (0.63), Fortis (0.54)
 
-##Quick Ratio:
+Quick Ratio:
 Strong (>1.5): Applied Materials (6.96)
 Adequate (1.0-1.5): Schlumberger (1.54)
 Weak (<1.0): Murphy Oil (0.89)
 
-##🌟 Profitability Indicators
+🌟 Profitability Indicators
 
-##Return on Assets (ROA):
+Return on Assets (ROA):
 Strong (>15%): Texas Instruments (15.9%)
 Average (5-15%): Honeywell (8.6%)
 Weak (<5%): YRC Worldwide (-33%)
 
-##Operating Margins:
+Operating Margins:
 High Tech: 20-30%
 Industrial: 10-20%
 Energy: 5-15%
 
-##🌟 Risk Factors Correlation
+🌟 Risk Factors Correlation
 
 1. Debt Metrics:
  - Debt/Equity > 3.0
