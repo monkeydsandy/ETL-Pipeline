@@ -37,8 +37,8 @@ def main():
     # Set up S3 credentials
     spark.sparkContext._jsc.hadoopConfiguration().set("com.amazonaws.services.s3.enableV4", "true")
     spark.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
-    spark.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.access.key", "AKIA4X5WED6FL437N6EE")
-    spark.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.secret.key", "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")
+    spark.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.access.key", "S3 ACCESS KEY")
+    spark.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.secret.key", "S3 SECRET KEY")
 
     # Extract: Read CSV from S3
     df = spark.read.csv("s3://etlkube/corporate_rating.csv", header=True, inferSchema=True)
