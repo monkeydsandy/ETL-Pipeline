@@ -11,7 +11,7 @@ A[S3 Bucket] --> B[Kubernetes Pod] --> C[Amazon Redshift]
 
 ![etl](https://github.com/user-attachments/assets/1c8eea1e-1c6a-4946-80de-773b0da41b75)
 
-##🌟 Credit risk assessment
+🌟 ##Credit risk assessment
 
 ##Current Ratio:
 Strong (>2.0): Texas Instruments (2.91), BioMarin (6.04)
