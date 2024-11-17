@@ -1,0 +1,53 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: s3-redshift-etl
+spec:
+  schedule: "0 1 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: s3-redshift-etl
+            image: etlkubedocker/s3-redshift-etl:v1
+            env:
+            - name: AWS_SECRET_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secrets
+                  key: aws-secret-name
+            - name: AWS_REGION
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secrets
+                  key: aws-region
+            - name: REDSHIFT_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: redshift-connection
+                  key: redshift-host
+            - name: REDSHIFT_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: redshift-connection
+                  key: redshift-port
+            - name: REDSHIFT_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: redshift-connection
+                  key: redshift-database
+            - name: REDSHIFT_USER
+              valueFrom:
+                secretKeyRef:
+                  name: redshift-connection
+                  key: redshift-user
+            # ... other environment variables as needed
+            resources:
+              requests:
+                cpu: 1
+                memory: 2Gi
+              limits:
+                cpu: 2
+                memory: 4Gi
+          restartPolicy: OnFailure
