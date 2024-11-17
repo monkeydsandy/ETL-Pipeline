@@ -1,7 +1,9 @@
-# S3 to Redshift ETL Pipeline
+# ETL Pipeline with Airflow, Spark, s3 and Amazon Redshift
 
 ## Overview
 This project implements an automated ETL (Extract, Transform, Load) pipeline using Apache Airflow running on Kubernetes. The pipeline moves data from Amazon S3 to Amazon Redshift.
+
+An AWS S3 bucket is used as a Data Lake in which json files are stored. The data is extracted from a json and parsed (cleaned). It is then transformed/processed with SparkSQL (PySpark) and loaded/stored in an Amazon Redshift Data Warehouse.
 
 ## Flow Diagram
 
